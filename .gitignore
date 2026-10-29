@@ -1,0 +1,23 @@
+﻿# Environnements virtuels Python
+.venv/
+venv/
+env/
+
+# Fichiers temporaires Python
+__pycache__/
+*.py[cod]
+
+# Fichiers contenant des informations confidentielles
+.env
+.env.*
+!.env.example
+
+# Base de données locale
+db.sqlite3
+
+# Configuration locale de VS Code
+.vscode/
+
+# Fichiers temporaires de Windows
+Thumbs.db
+Desktop.ini

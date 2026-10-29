@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ nom_bibliotheque }}</title>
+    <a href="{% url 'a_propos' %}">À propos</a>
+</head>
+<body>
+    <h1>{{ nom_bibliotheque }}</h1>
+    <p>Découvrez les livres de notre catalogue.</p>
+   <h2>Livres disponibles</h2>
+    <ul>
+        {% for livre in livres %}
+            <li>
+                <strong>{{ livre.titre }}</strong>
+                - {{ livre.auteur }}
+                ({{ livre.categorie.nom }})
+            </li>
+        {% empty %}
+            <li>Aucun livre disponible.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
